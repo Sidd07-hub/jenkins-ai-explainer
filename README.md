@@ -284,7 +284,7 @@ Pull requests are welcome! For major changes please open an issue first.
 
 **Siddhesh**
 - GitHub: [@Sidd07-hub](https://github.com/Sidd07-hub)
-- LinkedIn: [your linkedin here]
+- LinkedIn: [www.linkedin.com/in/siddhesh-nikumb-7884392b2]
 
 ---
 
