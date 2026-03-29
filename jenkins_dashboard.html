@@ -284,7 +284,7 @@ async function doLogin(){
  
   setBtn('loginBtn','loginSpin','loginTxt',true,'Connecting...');
   try{
-    var res  = await fetch('http://localhost:5000/connect',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({url:url,user:user,token:token})});
+    var res  = await fetch('http://13.205.117.51:5000/connect',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({url:url,user:user,token:token})});
     var data = await res.json();
     if(!res.ok||data.error) throw new Error(data.error||'Connection failed');
  
@@ -310,7 +310,7 @@ async function loadPipelines(){
   list.innerHTML = '<div class="state-box"><div class="big">&#8635;</div>Fetching pipelines...</div>';
  
   try{
-    var res  = await fetch('http://localhost:5000/pipelines',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(SESSION)});
+    var res  = await fetch('http://13.205.117.51:5000/pipelines',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(SESSION)});
     var data = await res.json();
     if(!res.ok||data.error) throw new Error(data.error);
  
@@ -412,7 +412,7 @@ async function selectPipeline(jobName, status){
  
   try{
     var body = { url:SESSION.url, user:SESSION.user, token:SESSION.token, job:jobName };
-    var res  = await fetch('http://localhost:5000/analyze',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});
+    var res  = await fetch('http://13.205.117.51:5000/analyze',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});
     var data = await res.json();
     if(!res.ok||data.error) throw new Error(data.error);
     renderAnalysis(data);
